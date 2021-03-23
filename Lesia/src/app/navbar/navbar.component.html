@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container justify-content-between align-items-baseline">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <a class="navbar-brand" href="/">{{logo}}</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" routerLink="/">{{home}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/about">{{about}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/contact">{{contact}}</a>
+                    </li>
+                </ul>
+
+                <ng-template [ngIf]="clickCounter > 50">
+                    <div class="text-end btn bg-primary me-2">VIP</div>
+                </ng-template>
+
+                <div class="text-end btn bg-white me-2">{{clickCounter}}</div>
+
+                <div class="text-end btn btn-danger" (click)="countClick()">Donate 10€</div>
+            </div>
+        </div>
+<!--
+        <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
+            <p>The clickCounter is <b>GREATER </b>than 4.</p>
+        </ng-template>
+        
+        <ng-template #none>
+            <p>The clickCounter is <b>NOT GREATER</b> than 4.</p>
+        </ng-template>
+    -->
+    </div>
+</nav>
+
