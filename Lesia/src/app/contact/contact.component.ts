@@ -13,6 +13,7 @@ export class ContactComponent implements OnInit {
     firstName: new FormControl('', Validators.min(3)),
     lastName: new FormControl('', Validators.required),
     email: new FormControl('', Validators.email),
+    checkbox: new FormControl('', Validators.requiredTrue),
   });
 
   constructor() {
@@ -25,7 +26,7 @@ export class ContactComponent implements OnInit {
       var a = this.contactForm.value;
       console.table(a)
     } else {
-      alert('Name must be longer as 3 characters and e-mail must be valid');
+      alert('Something is wrong');
     }
   }
 
