@@ -10,6 +10,8 @@ export class NavbarComponent implements OnInit {
   home: string;
   about: string;
   contact: string;
+  addCar: string;
+  donateText : string;
   clickCounter: number = 0;
 
   constructor() {
@@ -17,6 +19,8 @@ export class NavbarComponent implements OnInit {
     this.home = 'Home';
     this.about = 'About us';
     this.contact = 'Contact';
+    this.addCar = 'Add car';
+    this.donateText = 'Donate 10€';
   }
 
 
